@@ -1,0 +1,68 @@
+import matplot.pylot as plt
+import os. path
+
+
+'''read the image data'''
+#get the directory of this python script
+directory = os.path.dirname(os.path.abspath(__file__)
+#build an absolute filename
+filename = os.path.join(directory, '#jpeg')
+#read the image data into the array
+img = plt.imread(filename)
+
+'''show the image data'''
+#create figure with one subplot
+fig. ax = plt.subplots(1, 1)
+#show the image data in the subplot
+ax.imshow(img, interpolation='none')
+###
+# make a rectangle of pixles a solid color
+###
+
+height = len(img)
+width = len(img[0])
+for row in range(120, 210
+    for column in range(150,250):
+        img[row][column] = [65, 105, 225] # royal blue
+
+
+
+###
+# make the left side of the pic yellow
+###
+
+height = len(img)
+width = len(img[0])
+for row in range(0, 957):
+    for column in range(0, 75):
+        img[row][column = [255, 255, 0] # yellow
+###
+#make the bottom side of the pic yellow
+###
+
+height = len(img)
+width = len(img[0])
+for row in range(835, 957):
+    for column in range(0, 800):
+        img[row][column = [255, 255, 0] # yellow
+
+###
+#make the right side of the pic yellow
+###
+
+height = len(img)
+width = len(img[0])
+for row in range(0, 957):
+    for column in range(725, 800):
+        img[row][column = [255, 255, 0] # yellow
+        
+        
+###
+#make the top side of the pic yellow
+###
+
+height = len(img)
+width = len(img[0])
+for row in range(0, 82):
+    for column in range(0, 800):
+        img[row][column = [255, 255, 0] # yellow
